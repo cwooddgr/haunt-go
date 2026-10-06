@@ -3926,6 +3926,25 @@ func game_f_rewriteGeneratedRules(a612 ...js.Value) js.Value {
 			js.Put(v_rule, "action", js.Get(v_rewrites, js.Get(v_rule, "name")))
 		}
 	}
+	for _, it617 := range js.Iter(v_rules) {
+		v_rule := it617
+		_ = v_rule
+		if js.Truthy(js.And(js.Value(!js.StrictEq(js.Get(v_rule, "name"), js.Value("name8"))), func() js.Value { return js.Value(!js.StrictEq(js.Get(v_rule, "name"), js.Value("name9"))) })) {
+			continue
+		}
+		var v_original js.Value = js.Get(v_rule, "action")
+		_ = v_original
+		js.Put(v_rule, "action", js.Value(js.Func(func(a618 ...js.Value) js.Value {
+			v_m := js.Arg(a618, 0)
+			_ = v_m
+			v_rest := js.Value(js.RestArgs(a618, 1))
+			_ = v_rest
+			if js.Truthy(js.Or(js.Value(js.StrictEq(js.Get(v_m, "y"), js.Value("on"))), func() js.Value { return js.Value(js.StrictEq(js.Get(v_m, "y"), js.Value("off"))) })) {
+				return nil
+			}
+			return js.CallF(v_original, js.Spread([]js.Value{v_m}, js.Iter(v_rest))...)
+		})))
+	}
 	return nil
 }
 

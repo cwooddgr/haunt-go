@@ -10,7 +10,7 @@ Our server is an original Raspberry Pi Model B with one 700 MHz core. Scalo's Ja
 
 ## How it works
 
-We didn't rewrite the game by hand. `tools/transpile` reads Scalo's shipped JavaScript (`oracle/js/rules.generated.js` and `oracle/js/game.js`, pinned at upstream commit `09f6f9a`) and writes Go that calls into a small package of JavaScript semantics (`internal/js`), so `==`, truthiness, `+` on strings, and undefined vs. null all behave the way they did in the browser. Scalo's hand edits to the generated rules come along with everything else.
+We didn't rewrite the game by hand. `tools/transpile` reads Scalo's shipped JavaScript (`oracle/js/rules.generated.js` and `oracle/js/game.js`, pinned at upstream commit `cbfa108`) and writes Go that calls into a small package of JavaScript semantics (`internal/js`), so `==`, truthiness, `+` on strings, and undefined vs. null all behave the way they did in the browser. Scalo's hand edits to the generated rules come along with everything else.
 
 `internal/engine` is his rule engine ported line by line, keeping his conflict resolution and tie-breaking order exactly. On top of that it caches each rule's match until something the rule depends on changes, which is where most of the speed comes from.
 

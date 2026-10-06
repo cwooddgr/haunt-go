@@ -21,3 +21,11 @@ Laird's `name8`/`name9` rewrite "X Y on|off" to "X on|off Y"; when Y is itself o
 - `max_idle_time = 3600`, the Frotz games' value; the plan's 600 was WOPR's.
 - "[Press RETURN to go back to the menu]" after the game ends, because dgamelaunch redraws its menu over the final score otherwise.
 - Per-turn autosave kept as Scalo has it; ~6 KB per turn is below the ttyrec writes every game already makes to the Pi's 2013 SD card.
+
+## Re-pin to upstream cbfa108, which fixes the name8/name9 loop (2026-10-05)
+
+> **Author:** Claude Code (coder)
+> **Date:** 2026-10-05
+> **Status:** requested by Charlie via the house session ("a"), relayed to this session; proposed-by-agent for the details below
+
+Scalo's cbfa108 ("Fix infinite loop on inputs like 'take off off'") wraps `name8` and `name9` in `rewriteGeneratedRules` so they do nothing when Y is already on/off. "take off off" and "turn on on" now get "That does not compute." in the JS, and the transpiled Go matches. I re-recorded `difftest/loops/` goldens with the plain runner (the 20,000-cycle temp copy is gone) and kept the loop guard as a safety net for any other self-feeding rule; no difftest script reaches it now. The rest of the suite stayed byte-identical without re-recording.

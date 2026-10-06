@@ -6770,6 +6770,17 @@ export function rewriteGeneratedRules(rules, rt) {
     for (const rule of rules) {
         if (rewrites[rule.name]) rule.action = rewrites[rule.name];
     }
+
+    // name8/name9 rewrite "X Y on" → "X on Y"; when Y is already on/off the
+    // output equals the input and the rule refires forever.
+    for (const rule of rules) {
+        if (rule.name !== "name8" && rule.name !== "name9") continue;
+        const original = rule.action;
+        rule.action = async (m, ...rest) => {
+            if (m.y === "on" || m.y === "off") return;
+            return original(m, ...rest);
+        };
+    }
 }
 
 export async function runGame(term, opts = {}) {
