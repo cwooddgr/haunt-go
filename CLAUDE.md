@@ -31,4 +31,4 @@
 
 ## Status
 
-Live on the games server as menu key h since 2026-10-05.
+Live on the games server as menu key h; the Pi runs the upstream `cbfa108` build (deployed 2026-10-05). History: [docs/status.md](docs/status.md).
