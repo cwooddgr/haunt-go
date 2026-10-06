@@ -1,0 +1,25 @@
+# Script: navigate the lawn and enter the mansion.
+no
+wait
+wait
+board
+out
+e
+e
+e
+n
+n
+n
+press button
+press button
+press button
+press button
+yes
+yes
+yes
+claude
+none
+haunt
+look
+n
+stop

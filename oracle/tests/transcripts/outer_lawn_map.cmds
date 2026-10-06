@@ -1,0 +1,39 @@
+# Map outer-lawn geometry from bus exit point.
+# Strategy: at each step, 'look' then try each compass direction;
+# after each non-blocked move we 'look' and continue exploring north/east.
+no
+wait
+wait
+board
+out
+look
+# From start: try each direction
+n
+look
+s
+look
+# back to start
+n
+look
+e
+look
+w
+look
+# Walk north toward gate
+n
+look
+n
+look
+n
+look
+n
+look
+# Try gate interactions
+hi
+look
+open gate
+look
+knock
+look
+ring bell
+look

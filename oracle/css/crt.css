@@ -1,0 +1,388 @@
+:root {
+    --phosphor: #33ff66;
+    --phosphor-bright: #baffcc;
+    --phosphor-glow: rgba(51, 255, 102, 0.65);
+    --phosphor-dim: rgba(51, 255, 102, 0.35);
+    --bg: #050d06;
+    --bezel-a: #4a3b2e;
+    --bezel-b: #1d1510;
+}
+
+[data-theme="amber"] {
+    --phosphor: #ffb000;
+    --phosphor-bright: #ffe0a8;
+    --phosphor-glow: rgba(255, 176, 0, 0.65);
+    --phosphor-dim: rgba(255, 176, 0, 0.35);
+    --bg: #120a00;
+}
+
+[data-theme="white"] {
+    --phosphor: #e8e8e8;
+    --phosphor-bright: #ffffff;
+    --phosphor-glow: rgba(232, 232, 232, 0.6);
+    --phosphor-dim: rgba(232, 232, 232, 0.3);
+    --bg: #060606;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    background: #0a0807;
+    font-family: "VT323", "Share Tech Mono", "Courier New", monospace;
+    color: var(--phosphor);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.bezel {
+    position: relative;
+    width: min(95vw, 1200px);
+    height: min(90vh, 820px);
+    background:
+        radial-gradient(ellipse at 30% 20%, #5a4838 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 80%, #2a1f16 0%, transparent 70%),
+        linear-gradient(135deg, var(--bezel-a), var(--bezel-b));
+    border-radius: 2.5rem;
+    padding: 3rem 3rem 5rem 3rem;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.8),
+        inset 0 2px 4px rgba(255, 230, 180, 0.15),
+        inset 0 -2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.plate {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    color: rgba(255, 220, 180, 0.55);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+    user-select: none;
+}
+
+.power-led {
+    position: absolute;
+    bottom: 1.6rem;
+    right: 2.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff3020;
+    box-shadow: 0 0 6px #ff4030, 0 0 14px rgba(255, 48, 32, 0.6);
+}
+
+.screen-frame {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 1.5rem;
+    padding: 1.2rem;
+    box-shadow:
+        inset 0 0 40px rgba(0, 0, 0, 0.9),
+        inset 0 0 4px rgba(0, 0, 0, 1);
+}
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    transform: perspective(1400px) rotateX(0.6deg);
+    box-shadow:
+        inset 0 0 100px rgba(0, 0, 0, 0.85),
+        inset 0 0 20px rgba(0, 0, 0, 0.6);
+    animation: flicker 4s infinite;
+}
+
+body.no-flicker .screen {
+    animation: none;
+}
+
+.vignette {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 45%, rgba(0, 0, 0, 0.55) 100%);
+    z-index: 3;
+}
+
+.scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.28) 0,
+        rgba(0, 0, 0, 0.28) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    z-index: 4;
+    mix-blend-mode: multiply;
+}
+
+.hband {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.05), transparent);
+    pointer-events: none;
+    z-index: 5;
+    animation: hband 9s linear infinite;
+}
+
+@keyframes hband {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    23% { opacity: 0.985; }
+    50% { opacity: 0.97; }
+    77% { opacity: 0.99; }
+}
+
+.output {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    overflow-y: auto;
+    font-family: "VT323", "Share Tech Mono", "Courier New", monospace;
+    font-size: clamp(18px, 2.3vw, 26px);
+    line-height: 1.18;
+    color: var(--phosphor);
+    text-shadow:
+        0 0 2px var(--phosphor),
+        0 0 8px var(--phosphor-glow),
+        0 0 16px var(--phosphor-dim);
+    padding: 1.6rem 2rem 2rem 2rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+    scrollbar-width: thin;
+    scrollbar-color: var(--phosphor-dim) transparent;
+}
+
+.output::-webkit-scrollbar { width: 8px; }
+.output::-webkit-scrollbar-track { background: transparent; }
+.output::-webkit-scrollbar-thumb { background: var(--phosphor-dim); border-radius: 4px; }
+
+.output .line {
+    white-space: pre-wrap;
+}
+
+.output .line.dim {
+    opacity: 0.72;
+}
+
+.output .line.bright {
+    color: var(--phosphor-bright);
+}
+
+.more-prompt {
+    color: var(--phosphor-bright);
+    animation: blink 1.05s steps(1) infinite;
+}
+
+.prompt-line {
+    display: flex;
+    align-items: baseline;
+    padding: 0;
+    margin: 0;
+}
+
+.prompt-line[hidden] {
+    display: none;
+}
+
+.prompt-mark {
+    margin-right: 0.35em;
+}
+
+.input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-shadow: inherit;
+    caret-color: var(--phosphor);
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    max-width: 40ch;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.6ch;
+    background: var(--phosphor);
+    box-shadow: 0 0 6px var(--phosphor-glow);
+    animation: blink 1.05s steps(1) infinite;
+    margin-left: 1px;
+    vertical-align: baseline;
+}
+
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+.settings {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    z-index: 10;
+    font-family: "Share Tech Mono", monospace;
+}
+
+.gear {
+    background: transparent;
+    border: none;
+    color: rgba(255, 220, 180, 0.5);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0.2rem 0.6rem;
+    transition: color 0.2s;
+}
+
+.gear:hover {
+    color: rgba(255, 220, 180, 0.9);
+}
+
+.menu {
+    position: absolute;
+    top: 2.4rem;
+    right: 0.2rem;
+    background: rgba(20, 14, 8, 0.95);
+    border: 1px solid rgba(255, 220, 180, 0.25);
+    padding: 0.8rem 1rem;
+    border-radius: 0.4rem;
+    color: rgba(255, 220, 180, 0.85);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 180px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.menu[hidden] {
+    display: none;
+}
+
+.menu label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.menu select {
+    background: #111;
+    color: rgba(255, 220, 180, 0.9);
+    border: 1px solid rgba(255, 220, 180, 0.3);
+    font-family: inherit;
+    padding: 0.1rem 0.3rem;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    .bezel {
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        border-radius: 0;
+        padding: 0.6rem 0.6rem 2.2rem 0.6rem;
+    }
+
+    .screen-frame {
+        border-radius: 0.5rem;
+        padding: 0.4rem;
+    }
+
+    .screen {
+        border-radius: 0.4rem;
+        transform: none;
+    }
+
+    .output {
+        font-size: clamp(14px, 3.8vw, 20px);
+        padding: 0.8rem 1rem 1rem 1rem;
+    }
+
+    .plate {
+        font-size: 0.55rem;
+        bottom: 0.5rem;
+    }
+
+    .power-led {
+        bottom: 0.7rem;
+        right: 1.2rem;
+        width: 6px;
+        height: 6px;
+    }
+
+    .settings {
+        top: 0.3rem;
+        right: 0.4rem;
+    }
+
+    .gear {
+        font-size: 1.3rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .menu {
+        top: 2rem;
+        right: 0;
+        font-size: 0.85rem;
+        min-width: 160px;
+    }
+
+    .prompt-mark {
+        margin-right: 0.2em;
+    }
+
+    .input {
+        width: 70%;
+        max-width: none;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 500px) {
+    .bezel {
+        padding: 0.4rem 0.4rem 1.6rem 0.4rem;
+    }
+
+    .output {
+        font-size: clamp(12px, 3vw, 16px);
+        padding: 0.5rem 0.6rem;
+    }
+}

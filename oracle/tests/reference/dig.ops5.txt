@@ -1,0 +1,160 @@
+this is haunt. version 4.6
+see news for news.
+have you played before?
+*
+
+welcome novice. you are playing one of the world's largest
+production systems. the purpose of this game is to find
+treasure in a haunted house and then escape from the house.
+
+the program will give descriptions of locations and accept
+commands to perform actions.
+give it directives with simple 1-5 word commands.
+its knowledge of english is limited but imaginative.
+the directions are north, south, east, west,
+up and down. directions can be one letter (n,s,e,w,u,d).
+forward, back, left and right also work.
+to string commands together use 'then'. (eg. west then s)
+it will describe things to you, and a phrase enclosed in ' '
+is something it hears.
+
+special commands: inven tells you what you hold.
+score gives your current score.
+stop ends the adventure.
+look describes your current position.
+news describes new features.
+
+*************************************************************
+you get 15 points for finding a treasure and 5 points for
+getting it to the lawn outside the house. you get an extra
+bonus of 20 points for getting your body off the estate.
+the maximum number of points is 440
+good luck, you'll need it. ask for help if you want.
+*************************************************************
+copyright (c) 1979, 1980, 1981, 1982, 1983 john laird
+*************************************************************
+
+on with the adventure!!
+
+along time ago, a young couple was picnicing near the woods
+on the outskirts of town. they were celebrating the birth
+of their first child. unfortunately, a crazed moose
+inhabited that area and attacked them. the child and husband
+were unharmed, but the wife was gored to death by the moose.
+
+after the funeral, the man bought the land where the incident occurred
+and constructed a large mansion: chez moose. he filled it
+with the treasures of his family and claimed that his wife's
+soul was still in the area. he vowed to remain in the
+mansion until he had returned her soul to human flesh.
+he tried to bridge the gap between life and death to reclaim her.
+some say he was insane with grief, but others claimed that the madness was
+in his blood, and his wife's death brought it to the surface.
+after he entered the house, he never returned, and was declared dead
+seven years later. several people have entered the mansion
+looking for him but none of them have ever returned.
+there were rumors that he and his wife now haunt the house.
+
+that would be the end of the story except that the house
+still stands and is filled with priceless treasures.
+the house and all its contents are willed to his only descendant.
+oh yes, i forgot to tell you, the day the mother was killed,
+the child was stolen by gypsies.
+the will claims that only the descendant will know
+how to avoid going crazy and committing suicide
+while spending a night in the mansion.
+an obscure hereditary disease, orkhisnoires sakioannes,
+is supposed to play some part in this.
+
+so if your heritage is in doubt, you may be the descendant
+that can claim the treasure in the mansion.
+many people, claiming to be descendants have died trying...
+or at least never returned.
+
+the terms of the will say you get to keep any treasure
+you get to the lawn, but of course you must also get off the premises alive.
+because the house is haunted it must be destroyed, and nobody
+would be crazy enough to try and recover the rest of the treasure.
+if you do get out, the government has agreed to
+buy the land and destroy the house.
+
+if you are insane enough to try, your adventure starts at a bus stop.
+remember, type stop to end the adventure.
+
+we are at an intersection of two streets going n-s and e-w.
+there is a bus stop here.
+to the west a bus is pulling away from the next bus stop.
+*
+yawn!
+a bus has stopped in front of us.
+*
+la dee da.
+*
+as you find your seat, you notice the bus is empty.
+there isn't even a driver. but before you can change your mind,
+the bus starts up and drives away from the intersection.
+va vooooom!
+looking out the window you see many intersections flash by.
+
+after a while the intersections get farther apart.
+the bus is now in the outskirts of town.
+the bus comes up to an old mansion with a high gate surrounding it and stops.
+a voice comes over the speaker: 'all out, end of the line.'
+
+you are in a bus. there isn't a driver and the exit doors are open.
+*
+the bus drives off as you get off.
+to the north is the wall that surrounds chez moose.
+to the south is a road.
+to the north is a gate in a wall.
+further north a huge mansion looms.
+
+lights from inside illuminate the surrounding estate.
+the gate is inoperable, and you won't be able to open it.
+*
+to the north is the wall that surrounds chez moose.
+to the south is a road.
+*
+to the north is the wall that surrounds chez moose.
+to the south is a road.
+*
+this is the se corner of the wall. you can go n, s, e or w.
+*
+to the east is a dark forest, and to the west is a high wall.
+*
+to the east is a dark forest, and to the west is a high wall.
+*
+to the east is a dark forest, and to the west is a high wall.
+there is a gate in the wall that spans the
+driveway that leads into the inner grounds of the mansion.
+by the left hand side of the gate is a 'jack-in-the-box'
+speaker with a button.
+*
+the gate opens. you rush in and then it closes behind you.
+out of the speaker you hear, 'now you are in, but will you ever get out?'
+you are on the driveway. the gate to the outside
+is to the east, but is locked electronically.
+to the east is a wall.
+*
+to the east is a wall.
+*
+the wall is in the way.
+*
+the wall is in the way.
+*
+the wall is in the way.
+*
+to the east is a wall.
+*
+there is a fresh grave here.
+to the east is a wall.
+you're on the inside of north border of a wall.
+*
+the ground is too hard to dig anymore.
+*
+the ground is too hard to dig anymore.
+*
+the party's over.
+your final score is 0
+the total possible is 440
+hmm... i don't think you tried very hard.

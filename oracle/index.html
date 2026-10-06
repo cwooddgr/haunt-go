@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HAUNT — Chez Moose Terminal Mk IV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/crt.css">
+</head>
+<body data-theme="green">
+    <div class="bezel">
+        <div class="plate">CHEZ MOOSE TERMINAL MODEL IV</div>
+        <div class="power-led" aria-hidden="true"></div>
+        <div class="screen-frame">
+            <div class="screen" id="screen">
+                <div class="vignette" aria-hidden="true"></div>
+                <div class="scanlines" aria-hidden="true"></div>
+                <div class="hband" aria-hidden="true"></div>
+                <div class="output" id="output"></div>
+                <div class="prompt-line" id="prompt-line" hidden><span class="prompt-mark">*&nbsp;</span><input type="text" class="input" id="input" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" enterkeyhint="go"><span class="cursor" id="cursor"></span></div>
+            </div>
+        </div>
+        <div class="settings" id="settings">
+            <button class="gear" id="gear" title="Settings">&#9881;</button>
+            <div class="menu" id="settings-menu" hidden>
+                <label>Phosphor
+                    <select id="theme-select">
+                        <option value="green">Green P1</option>
+                        <option value="amber">Amber P3</option>
+                        <option value="white">White</option>
+                    </select>
+                </label>
+                <label>Speed
+                    <select id="speed-select">
+                        <option value="30">Slow</option>
+                        <option value="120" selected>Normal</option>
+                        <option value="600">Fast</option>
+                        <option value="50000">Instant</option>
+                    </select>
+                </label>
+                <label><input type="checkbox" id="flicker-toggle" checked> Flicker</label>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        import("./js/main.js?v=" + Date.now());
+    </script>
+</body>
+</html>

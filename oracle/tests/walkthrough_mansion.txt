@@ -1,0 +1,35 @@
+# Enter mansion, explore, pick up items
+yes
+wait
+wait
+board
+out
+e
+e
+e
+n
+n
+n
+press button
+press button
+press button
+press button
+yes
+yes
+yes
+claude
+none
+haunt
+s
+w
+w
+w
+knock
+n
+get candy
+inven
+n
+get chair
+inven
+score
+stop

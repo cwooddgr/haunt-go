@@ -1,0 +1,39 @@
+# How do you get past the gate in the binary?
+no
+wait
+wait
+board
+out
+# Try climb/jump/wall interactions
+climb wall
+look
+climb gate
+look
+jump gate
+look
+climb ivy
+look
+# Maybe there's ivy east or west?
+e
+look
+climb
+look
+climb wall
+look
+w
+w
+look
+climb
+look
+climb wall
+look
+# Try vocalizations
+shout
+yell
+help
+hello
+# Try searching
+search
+look wall
+examine gate
+examine wall

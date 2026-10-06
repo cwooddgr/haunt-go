@@ -1,0 +1,73 @@
+#!/usr/bin/env expect -f
+# Usage: remote_play.exp <command-file> <output-transcript>
+# Sends each non-comment, non-blank line from <command-file> to the remote
+# haunt binary on twenex.org, captures the full session to <output-transcript>.
+# Paces sends deliberately — the service gets cranky at high input rates.
+
+if {$argc < 2} {
+    puts "usage: $argv0 <command-file> <transcript-out>"
+    exit 2
+}
+set cmdfile [lindex $argv 0]
+set outfile [lindex $argv 1]
+
+set fh [open $cmdfile r]
+set cmds {}
+while {[gets $fh line] >= 0} {
+    set t [string trim $line]
+    if {$t eq "" || [string index $t 0] eq "#"} { continue }
+    lappend cmds $t
+}
+close $fh
+
+log_file -noappend $outfile
+set timeout 45
+set send_slow {1 0.08}
+
+spawn ssh -o StrictHostKeyChecking=accept-new twenex@sdf.org
+
+expect {
+    timeout { puts "\n\[TIMEOUT at first @]"; exit 1 }
+    -re "@\[^\n]*$" { }
+}
+send -s -- "login new\r"
+
+expect {
+    timeout { puts "\n\[TIMEOUT at password]"; exit 1 }
+    -nocase "password" { }
+}
+send -s -- "new\r"
+
+# Wait for TOPS-20 shell prompt
+expect {
+    timeout { puts "\n\[TIMEOUT at shell]"; exit 1 }
+    -re "@ *$" { }
+}
+send -s -- "haunt\r"
+
+# Wait for first game prompt
+expect {
+    timeout { puts "\n\[TIMEOUT at game prompt]"; exit 1 }
+    "*"  { }
+}
+
+# Pacing between commands — the game prompts with '*'. Wait for it each time.
+foreach c $cmds {
+    # Small inter-command pause
+    after 250
+    send -s -- "$c\r"
+    expect {
+        timeout { puts "\n\[TIMEOUT after: $c]"; break }
+        -re "\\*\[^\n]*$" { }
+    }
+}
+
+# Clean quit if we haven't already
+after 250
+send -s -- "stop\r"
+set timeout 10
+expect {
+    timeout { }
+    -re ".+" { exp_continue }
+}
+expect eof

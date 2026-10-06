@@ -1,0 +1,6 @@
+# Laird's name9 rewrites "X Y off" to "X off Y"; "take off off" feeds itself.
+# The JS spins to its 1,000,000-cycle limit and ends the game; Go stops
+# when the turn's state repeats and must print the same thing.
+no
+wait
+take off off

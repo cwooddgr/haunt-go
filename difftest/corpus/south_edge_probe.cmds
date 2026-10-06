@@ -1,0 +1,42 @@
+# From SW corner of house, walk east along south edge
+no
+wait
+wait
+board
+out
+e
+e
+e
+n
+n
+n
+press button
+press button
+press button
+press button
+yes
+yes
+yes
+claude
+none
+haunt
+n
+n
+w
+w
+w
+w
+s
+s
+s
+e
+look
+e
+look
+e
+look
+e
+look
+n
+look
+knock

@@ -1,0 +1,26 @@
+# save, restore, list slots, and the resume prompt
+no
+wait
+wait
+board
+out
+save
+save 2
+saves
+n
+restore 2
+restore 3
+restore
+saves
+@restart
+y
+look
+n
+@restart
+yy
+score
+@restart
+n
+no
+@restart
+maybe

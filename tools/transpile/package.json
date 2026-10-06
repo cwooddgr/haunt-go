@@ -1,0 +1,10 @@
+{
+  "name": "haunt-go-transpile",
+  "private": true,
+  "description": "Translates Scalo's Haunt JS into Go for haunt-go",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "acorn": "^8.19.0"
+  }
+}

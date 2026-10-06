@@ -1,0 +1,31 @@
+# Test: dig at the grave (minimal path to grave)
+no
+wait
+wait
+board
+out
+e
+e
+e
+n
+n
+n
+press button
+press button
+press button
+press button
+yes
+yes
+yes
+claude
+none
+haunt
+n
+e
+e
+e
+n
+n
+dig
+dig
+stop

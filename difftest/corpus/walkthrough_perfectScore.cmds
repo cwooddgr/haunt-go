@@ -1,0 +1,261 @@
+# Walkthrough collecting every reachable treasure then escaping via truck.
+# Requires patches: patch_spawn_football, patch_force_morning, patch_stairs_debris_up.
+#
+# Treasures collected: chair, corkscrew, marijuana, ring, painting, gem,
+#                      jade, orchid, cube, candlesticks, bone.
+# Unreachable in port: chest (ocean), coins (bathysphere), diamonds (cave).
+
+# === Intro ===
+no
+
+# === Bus stop ===
+wait
+wait
+board
+out
+
+# === Outer lawn → gate ===
+e
+e
+e
+n
+n
+n
+press button
+press button
+press button
+press button
+yes
+yes
+yes
+claude
+none
+haunt
+
+# === Ivy wall, climb, mattress, jump ===
+n
+w
+w
+w
+climb
+s
+get mattress
+n
+drop mattress
+jump
+
+# === To front door ===
+w
+s
+s
+e
+knock
+n
+
+# === Foyer candy, main_hall chair + football ===
+get candy
+n
+get chair
+get football
+
+# === library → wine_cellar (corkscrew) ===
+e
+turn bust
+e
+d
+get corkscrew
+u
+w
+w
+
+# === Upstairs trip 1: marijuana, lab, bar bottle, wait morning, ring ===
+n
+u
+pull brick
+e
+get marijuana
+drop marijuana
+w
+u
+pull lever
+kick football
+give candy
+w
+get bottle
+e
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+get ring
+
+# === Down to smelly_room, uncover and grab painting ===
+d
+d
+d
+w
+w
+clean
+get painting
+e
+e
+
+# === Upstairs trip 2: bedroom → bathroom (gem + bathwater) → backroom (jade) ===
+n
+u
+w
+s
+e
+get soap
+mount bathtub
+turn on water
+fill bottle
+sit on toilet
+flush
+get jade
+flush
+w
+n
+
+# === Jump off balcony with all upstairs treasures ===
+jump
+
+# === Drop treasures on lawn (5,6) ===
+drop chair
+drop corkscrew
+drop ring
+drop gem
+drop jade
+drop painting
+
+# === Water orchid at (3,7) ===
+w
+w
+n
+pour
+get orchid
+drop orchid
+
+# === Re-enter front door for cube + candlesticks ===
+# From (3,7) go to (5,4) via (3,6)->(3,5)->(3,4)->(4,4)->(5,4)
+s
+s
+s
+e
+e
+knock
+n
+n
+
+# === Collapse stairs, kitchen cube, dining candlesticks ===
+n
+jump
+n
+e
+open
+get cube
+drop cube
+w
+w
+get candlesticks
+e
+s
+u
+w
+s
+n
+jump
+drop candlesticks
+
+# === Grave dig + lever (truck escape) ===
+e
+e
+e
+n
+n
+dig
+dig
+pull lever
+
+# === Wait for oil→enter→walk ===
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+
+# === Navigate to truck (7,5) ===
+s
+s
+s
+w
+wait
+
+# === Drop everything, enter truck ===
+drop bottle
+drop watch
+drop token
+open truck
+enter truck
+close truck
+
+# === Wait for return phase ===
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+donate
+donate
+donate
+donate
+donate
+donate
+donate
+donate
+donate
+donate
+donate
+donate
+stop

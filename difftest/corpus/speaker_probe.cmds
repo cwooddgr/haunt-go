@@ -1,0 +1,27 @@
+# Reach east gate, press button, see what happens
+no
+wait
+wait
+board
+out
+e
+e
+e
+n
+n
+n
+look
+press button
+look
+push button
+look
+# If something happened maybe we can talk
+hi
+hello
+help
+# Or pass through
+n
+look
+w
+look
+open gate

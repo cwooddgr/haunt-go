@@ -1,0 +1,8 @@
+# Verify bare `out` exits the bus (binary-authentic verb).
+no
+wait
+wait
+board
+out
+look
+stop

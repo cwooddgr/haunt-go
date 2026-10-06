@@ -1,0 +1,46 @@
+# Push east/west along the wall looking for a climb spot.
+# Also check south (forest) for alternate route.
+no
+wait
+wait
+board
+out
+# Go east as far as possible, looking each step
+e
+look
+climb
+e
+look
+climb
+e
+look
+climb
+e
+look
+climb
+# Now try south
+s
+look
+s
+look
+# Return path check
+n
+look
+# Go back and push west
+w
+w
+w
+w
+look
+w
+look
+climb
+w
+look
+climb
+w
+look
+climb
+w
+look
+climb

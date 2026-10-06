@@ -1,0 +1,115 @@
+this is haunt. version 4.6
+see news for news.
+have you played before?
+*
+
+we are at an intersection of two streets going n-s and e-w.
+there is a bus stop here.
+to the west a bus is pulling away from the next bus stop.
+*
+yawn!
+a bus has stopped in front of us.
+*
+la dee da.
+*
+as you find your seat, you notice the bus is empty.
+there isn't even a driver. but before you can change your mind,
+the bus starts up and drives away from the intersection.
+va vooooom!
+looking out the window you see many intersections flash by.
+
+after a while the intersections get farther apart.
+the bus is now in the outskirts of town.
+the bus comes up to an old mansion with a high gate surrounding it and stops.
+a voice comes over the speaker: 'all out, end of the line.'
+
+you are in a bus. there isn't a driver and the exit doors are open.
+*
+the bus drives off as you get off.
+to the north is the wall that surrounds chez moose.
+to the south is a road.
+to the north is a gate in a wall.
+further north a huge mansion looms.
+
+lights from inside illuminate the surrounding estate.
+the gate is inoperable, and you won't be able to open it.
+*
+to the north is the wall that surrounds chez moose.
+to the south is a road.
+*
+to the north is the wall that surrounds chez moose.
+to the south is a road.
+*
+this is the se corner of the wall. you can go n, s, e or w.
+*
+to the east is a dark forest, and to the west is a high wall.
+*
+to the east is a dark forest, and to the west is a high wall.
+*
+to the east is a dark forest, and to the west is a high wall.
+there is a gate in the wall that spans the
+driveway that leads into the inner grounds of the mansion.
+by the left hand side of the gate is a 'jack-in-the-box'
+speaker with a button.
+*
+the gate opens. you rush in and then it closes behind you.
+out of the speaker you hear, 'now you are in, but will you ever get out?'
+you are on the driveway. the gate to the outside
+is to the east, but is locked electronically.
+to the east is a wall.
+*
+to the east is a wall.
+*
+you're on the lawn of the mansion.
+*
+you are at the se corner of the house.
+*
+muffled sounds can be heard from inside.
+you are outside a large door in the front of an old mansion.
+*
+'knock! knock!'
+the door creaks open.
+a voice from within says: 'welcome, lover.'
+*
+some noise is coming from the hall.
+you feel a chill run down your spine, and you doubt your own sanity.
+
+a booming voice proclaims:
+'you won't get out by a door.'
+'... at least alive!'
+
+the house is very damp and musty.
+you are inside of the house in the inner foyer.
+there is a walk-in closet to the west, an entrance to a hall to the north.
+there is a bowl of candy on the ground.
+*
+you just got candy .
+*
+you have the following:
+candy
+token
+watch
+*
+weird noises are coming from above.
+there is an old style chair on the ground.
+you are in the main hall.
+the foyer is south.
+the hall extends west and darkens.
+a large room is to the east.
+*
+you just got chair .
+the plate of the back of the chair says 'made by louis xiv'
+weird noises are coming from above.
+*
+you have the following:
+chair
+candy
+token
+watch
+*
+score = 15
+*
+the party's over.
+your final score is 15
+the total possible is 440
+hmm... i don't think you tried very hard.

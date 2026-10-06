@@ -1,0 +1,152 @@
+# Full walkthrough: gate → balcony → mansion → escape via truck
+# Realtime starts at 2200, +2 per normal turn.
+
+# === Intro ===
+no
+
+# === Bus stop ===
+wait
+wait
+board
+out
+
+# === Outer lawn to gate (8,5) ===
+e
+e
+e
+n
+n
+n
+
+# === Enter gate ===
+press button
+press button
+press button
+press button
+yes
+yes
+yes
+claude
+none
+haunt
+
+# === Navigate to ivy wall at (5,6): north then west ===
+n
+w
+w
+w
+
+# === Climb ivy to balcony ===
+climb
+
+# === Bedroom: get mattress ===
+s
+get mattress
+
+# === Balcony: drop mattress, jump to lawn (5,6) ===
+n
+drop mattress
+jump
+
+# === Navigate around house to front door (5,4): w,s,s,e ===
+w
+s
+s
+e
+
+# === Enter mansion ===
+knock
+n
+
+# === Main hall: get chair (treasure) ===
+n
+get chair
+
+# === Upstairs: stairs → upper hall → long hall → bedroom ===
+n
+u
+w
+s
+
+# === Bedroom → balcony → drop items → jump ===
+n
+drop chair
+drop watch
+drop token
+jump
+
+# === On lawn (5,6). Navigate to grave at (8,8) ===
+e
+e
+e
+n
+n
+
+# === Dig grave and pull lever ===
+dig
+dig
+pull lever
+
+# === Wait for truck. Oil sequence:
+# oil_time = rt + 30. oil→enter: 15 waits. enter→walk: 5 waits.
+# Truck appears at walk phase. Need to be at (7,5) and inside truck
+# before return phase ends.
+# Wait 15 waits for oil→enter timer ===
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+
+# === Truck appears after 5 more waits (enter→walk) ===
+# But we need to navigate during these waits too.
+# Navigate from (8,8) towards (7,5) while waiting.
+s
+s
+s
+w
+wait
+
+# === Now at (7,5). Truck should be here. ===
+open truck
+enter truck
+close truck
+
+# === Wait for return timer to fire while in truck ===
+# Pad generously since exact timing depends on turn count
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+wait
+
+# === Sell/donate. The (accept) call in name550 reads directly from term ===
+donate
+donate
+donate
+stop

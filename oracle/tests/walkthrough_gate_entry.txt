@@ -1,0 +1,24 @@
+# Verify east-gate entry via button + dialog + trivia (binary fidelity)
+no
+wait
+wait
+board
+out
+e
+e
+e
+n
+n
+n
+press button
+press button
+press button
+press button
+yes
+yes
+yes
+claude
+none
+haunt
+inven
+stop

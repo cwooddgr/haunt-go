@@ -1,0 +1,18 @@
+# Baseline opening: bus stop → outer lawn → gate approach
+# Mirrors first section of tests/walkthrough_perfectScore.txt
+no
+look
+wait
+wait
+board
+look
+exit bus
+look
+e
+e
+e
+look
+n
+n
+n
+look

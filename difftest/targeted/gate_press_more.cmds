@@ -1,0 +1,26 @@
+# gate: press the buzzer too often, then wrong answers
+no
+wait
+wait
+board
+out
+e
+e
+e
+n
+n
+n
+press button
+no
+no
+press button
+press button
+press button
+press button
+press button
+press button
+yes
+no
+yes
+yes
+no
