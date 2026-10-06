@@ -31,4 +31,4 @@
 
 ## Status
 
-2026-10-05: port complete; deployment to the games server in review.
+Live on the games server as menu key h since 2026-10-05.
