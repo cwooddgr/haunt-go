@@ -24,7 +24,7 @@
 ## Rules
 
 - **Never hand-edit `*_gen.go`**: change the translator or `internal/js`, then `./build.sh`. (Claude Code, 2026-10-05)
-- **Fidelity bar is byte-identical transcripts vs the JS** on every difftest script (decided-by-user 2026-10-05, "2a"). A difference is a bug in our port unless it's the documented loop guard.
+- **Fidelity bar is byte-identical transcripts vs the JS** on every difftest script (decided-by-user 2026-10-05; [why](docs/decisions.md)). A difference is a bug in our port unless it's the documented loop guard.
 - **Loop guard**: Laird's `name8`/`name9` word-order rewrites loop forever on input like "take off off". The JS spins to 1,000,000 cycles, then ends the game silently; we end it when a turn's working-memory contents repeat (or at 2,000 cycles), printing the same thing. `difftest/loops/` covers it. (Claude Code, 2026-10-05)
 - Kept on purpose: Scalo's `yy` resume backdoor (decided-by-user 2026-10-05).
 - Deploying to the Pi: `scp bin/haunt-armv6 games:/tmp/ && ssh games 'sudo install -o root -g root -m 755 /tmp/haunt-armv6 /var/dgl/usr/games/haunt'`. Live service with real players; a new binary only affects sessions started afterwards.
